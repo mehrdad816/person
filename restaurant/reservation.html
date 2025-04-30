@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>رزرو میز - رستوران طلایی</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reservation.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/persian-datepicker/1.2.0/css/persian-datepicker.min.css">
+</head>
+<body>
+    <!-- هدر سایت -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">رستوران <span>طلایی</span></a>
+            
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">صفحه اصلی</a></li>
+                    <li><a href="menu.html">منو</a></li>
+                    <li><a href="index.html#about">درباره ما</a></li>
+                    <li><a href="index.html#gallery">گالری</a></li>
+                    <li><a href="index.html#reviews">نظرات</a></li>
+                    <li><a href="index.html#contact">تماس</a></li>
+                </ul>
+            </nav>
+            
+            <div class="icons">
+                <a href="reserve.html" class="reserve-btn active">رزرو میز</a>
+                <a href="#" class="cart-btn"><i class="fas fa-shopping-cart"></i></a>
+                <div class="menu-btn"><i class="fas fa-bars"></i></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- بخش رزرو میز -->
+    <section class="reservation">
+        <div class="container">
+            <div class="section-header">
+                <h2>رزرو میز در رستوران طلایی</h2>
+                <p>برای رزرو میز، فرم زیر را پر کنید</p>
+            </div>
+            
+            <div class="reservation-container">
+                <div class="reservation-form">
+                    <form id="reserve-form">
+                        <div class="form-group">
+                            <label for="name">نام و نام خانوادگی</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">شماره تماس</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">ایمیل (اختیاری)</label>
+                            <input type="email" id="email" name="email">
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="date">تاریخ رزرو</label>
+                                <input type="text" id="date" name="date" class="datepicker" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="time">ساعت رزرو</label>
+                                <select id="time" name="time" required>
+                                    <option value="">ساعت را انتخاب کنید</option>
+                                    <option value="11:00">11:00 صبح</option>
+                                    <option value="12:00">12:00 ظهر</option>
+                                    <option value="13:00">1:00 بعدازظهر</option>
+                                    <option value="14:00">2:00 بعدازظهر</option>
+                                    <option value="15:00">3:00 بعدازظهر</option>
+                                    <option value="16:00">4:00 بعدازظهر</option>
+                                    <option value="17:00">5:00 بعدازظهر</option>
+                                    <option value="18:00">6:00 عصر</option>
+                                    <option value="19:00">7:00 عصر</option>
+                                    <option value="20:00">8:00 شب</option>
+                                    <option value="21:00">9:00 شب</option>
+                                    <option value="22:00">10:00 شب</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="guests">تعداد نفرات</label>
+                                <select id="guests" name="guests" required>
+                                    <option value="">تعداد را انتخاب کنید</option>
+                                    <option value="1">1 نفر</option>
+                                    <option value="2">2 نفر</option>
+                                    <option value="3">3 نفر</option>
+                                    <option value="4">4 نفر</option>
+                                    <option value="5">5 نفر</option>
+                                    <option value="6">6 نفر</option>
+                                    <option value="7">7 نفر</option>
+                                    <option value="8">8 نفر</option>
+                                    <option value="9">9 نفر</option>
+                                    <option value="10">10 نفر</option>
+                                    <option value="10+">بیش از 10 نفر</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="table-type">نوع میز (قیمت به ازای هر نفر)</label>
+                                <select id="table-type" name="table-type" onchange="updatePrice()">
+                                    <option value="" data-price="0">فرقی نمی‌کند (رایگان)</option>
+                                    <option value="window" data-price="50000">میز کنار پنجره (50,000 تومان)</option>
+                                    <option value="terrace" data-price="70000">میز تراس (70,000 تومان)</option>
+                                    <option value="private" data-price="100000">اتاق خصوصی (100,000 تومان)</option>
+                                    <option value="vip" data-price="150000">میز وی آی پی (150,000 تومان)</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="price-summary">
+                            <h4>خلاصه هزینه:</h4>
+                            <div class="price-details">
+                                <div>
+                                    <span>هزینه پایه:</span>
+                                    <span class="base-price">0 <span>تومان</span></span>
+                                </div>
+                                <div>
+                                    <span>هزینه میز:</span>
+                                    <span class="table-price">0 <span>تومان</span></span>
+                                </div>
+                                <div class="total">
+                                    <span>مجموع:</span>
+                                    <span class="total-price">0 <span>تومان</span></span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="notes">توضیحات اضافه (اختیاری)</label>
+                            <textarea id="notes" name="notes" rows="3"></textarea>
+                        </div>
+                        
+                        <div class="form-submit">
+                            <button type="submit" class="btn">رزرو میز</button>
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="reservation-info">
+                    <div class="info-card">
+                        <h3>ساعت کاری رستوران</h3>
+                        <ul class="working-hours">
+                            <li>
+                                <span>شنبه تا چهارشنبه:</span>
+                                <span>11:00 صبح - 23:00 شب</span>
+                            </li>
+                            <li>
+                                <span>پنجشنبه و جمعه:</span>
+                                <span>11:00 صبح - 00:00 نیمه شب</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h3>مزایای رزرو آنلاین</h3>
+                        <ul class="benefits">
+                            <li><i class="fas fa-check-circle"></i> تضمین میز در ساعت مورد نظر شما</li>
+                            <li><i class="fas fa-check-circle"></i> دریافت تخفیف 10% برای اولین رزرو</li>
+                            <li><i class="fas fa-check-circle"></i> امکان انتخاب میز دلخواه</li>
+                            <li><i class="fas fa-check-circle"></i> صرفه جویی در زمان</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h3>اطلاعات تماس</h3>
+                        <div class="contact-info">
+                            <p><i class="fas fa-map-marker-alt"></i> تهران، خیابان ولیعصر، پلاک 123</p>
+                            <p><i class="fas fa-phone"></i> 021-12345678</p>
+                            <p><i class="fas fa-envelope"></i> info@talaei-restaurant.ir</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- فوتر -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>رستوران طلایی</h3>
+                    <p>تهران، خیابان ولیعصر، پلاک 123</p>
+                    <p>تلفن: 021-12345678</p>
+                    <p>ایمیل: info@talaei-restaurant.ir</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>لینک‌های سریع</h3>
+                    <ul>
+                        <li><a href="index.html">صفحه اصلی</a></li>
+                        <li><a href="menu.html">منو</a></li>
+                        <li><a href="reserve.html">رزرو میز</a></li>
+                        <li><a href="index.html#about">درباره ما</a></li>
+                        <li><a href="index.html#contact">تماس با ما</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>ساعت کاری</h3>
+                    <p>شنبه تا چهارشنبه: 11:00 - 23:00</p>
+                    <p>پنجشنبه و جمعه: 11:00 - 00:00</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>شبکه‌های اجتماعی</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 تمام حقوق برای رستوران طلایی محفوظ است.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- اسکریپت‌ها -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/persian-date/1.2.0/persian-date.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/persian-datepicker/1.2.0/js/persian-datepicker.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/reservation.js"></script>
+</body>
+</html>

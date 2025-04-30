@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>گالری تصاویر - رستوران طلایی</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- هدر سایت -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">رستوران <span>طلایی</span></a>
+            
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">صفحه اصلی</a></li>
+                    <li><a href="menu.html">منو</a></li>
+                    <li><a href="reserve.html">رزرو میز</a></li>
+                    <li><a href="index.html#about">درباره ما</a></li>
+                    <li><a href="gallery.html" class="active">گالری</a></li>
+                    <li><a href="index.html#reviews">نظرات</a></li>
+                    <li><a href="index.html#contact">تماس</a></li>
+                </ul>
+            </nav>
+            
+            <div class="icons">
+                <a href="reserve.html" class="reserve-btn">رزرو میز</a>
+                <a href="#" class="cart-btn"><i class="fas fa-shopping-cart"></i></a>
+                <div class="menu-btn"><i class="fas fa-bars"></i></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- بخش گالری -->
+    <section class="gallery-page">
+        <div class="container">
+            <div class="section-header">
+                <h2>گالری تصاویر رستوران طلایی</h2>
+                <p>لحظات زیبا و محیط دلنشین رستوران ما</p>
+            </div>
+            
+            <div class="gallery-filter">
+                <button class="filter-btn active" data-filter="all">همه تصاویر</button>
+                <button class="filter-btn" data-filter="food">غذاها</button>
+                <button class="filter-btn" data-filter="interior">فضای داخلی</button>
+                <button class="filter-btn" data-filter="events">مراسمات</button>
+                <button class="filter-btn" data-filter="team">تیم رستوران</button>
+            </div>
+            
+            <div class="gallery-grid">
+                <!-- غذاها -->
+                <div class="gallery-item food" data-category="food">
+                    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80" alt="غذای رستوران">
+                    <div class="gallery-overlay">
+                        <h3>چلوخورش قرمه سبزی</h3>
+                        <p>با گوشت گوسفندی و سبزیجات ارگانیک</p>
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                
+                <div class="gallery-item food" data-category="food">
+                    <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1371&q=80" alt="کباب برگ">
+                    <div class="gallery-overlay">
+                        <h3>کباب برگ ویژه</h3>
+                        <p>با گوشت گوساله ممتاز</p>
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                
+                <!-- فضای داخلی -->
+                <div class="gallery-item interior" data-category="interior">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="فضای داخلی">
+                    <div class="gallery-overlay">
+                        <h3>سالن اصلی</h3>
+                        <p>فضای دنج و آرامش بخش</p>
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                
+                <div class="gallery-item interior" data-category="interior">
+                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="میزهای رستوران">
+                    <div class="gallery-overlay">
+                        <h3>میزهای VIP</h3>
+                        <p>چیدمان مدرن و زیبا</p>
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                
+                <!-- مراسمات -->
+                <div class="gallery-item events" data-category="events">
+                    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" alt="جشن تولد">
+                    <div class="gallery-overlay">
+                        <h3>جشن تولد</h3>
+                        <p>مراسمات خصوصی</p>
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                
+                <div class="gallery-item events" data-category="events">
+                    <img src="https://images.unsplash.com/photo-1537047902294-62a40c20a6ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1450&q=80" alt="دسرهای ویژه">
+                    <div class="gallery-overlay">
+                        <h3>شب دسرهای ویژه</h3>
+                        <p>برنامه‌های فصلی</p>
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                
+                <!-- تیم رستوران -->
+                <div class="gallery-item team" data-category="team">
+                    <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="سرآشپز">
+                    <div class="gallery-overlay">
+                        <h3>سرآشپز محمدی</h3>
+                        <p>با 15 سال سابقه کار</p>
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                
+                <div class="gallery-item team" data-category="team">
+                    <img src="https://images.unsplash.com/photo-1581349485608-9469926a8e5e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1364&q=80" alt="تیم خدمات">
+                    <div class="gallery-overlay">
+                        <h3>تیم خدمات</h3>
+                        <p>مهمان نوازی حرفه‌ای</p>
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                
+                <!-- تصاویر اضافی -->
+                <div class="gallery-item food" data-category="food">
+                    <img src="https://images.unsplash.com/photo-1482049016688-2d3e1b311543?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1310&q=80" alt="سالاد سزار">
+                    <div class="gallery-overlay">
+                        <h3>سالاد سزار</h3>
+                        <p>با سس مخصوص</p>
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                
+                <div class="gallery-item interior" data-category="interior">
+                    <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="تراس رستوران">
+                    <div class="gallery-overlay">
+                        <h3>تراس رستوران</h3>
+                        <p>فضای باز در فصل بهار و تابستان</p>
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                
+                <div class="gallery-item events" data-category="events">
+                    <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="موسیقی زنده">
+                    <div class="gallery-overlay">
+                        <h3>موسیقی زنده</h3>
+                        <p>جمعه‌های رستوران طلایی</p>
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                
+                <div class="gallery-item team" data-category="team">
+                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="تیم مدیریت">
+                    <div class="gallery-overlay">
+                        <h3>تیم مدیریت</h3>
+                        <p>متخصصان مهمان نوازی</p>
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- مودال نمایش تصویر -->
+    <div class="image-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <img src="" alt="" class="modal-image">
+            <div class="image-caption">
+                <h3></h3>
+                <p></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- فوتر -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>رستوران طلایی</h3>
+                    <p>تهران، خیابان ولیعصر، پلاک 123</p>
+                    <p>تلفن: 021-12345678</p>
+                    <p>ایمیل: info@talaei-restaurant.ir</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>لینک‌های سریع</h3>
+                    <ul>
+                        <li><a href="index.html">صفحه اصلی</a></li>
+                        <li><a href="menu.html">منو</a></li>
+                        <li><a href="reserve.html">رزرو میز</a></li>
+                        <li><a href="gallery.html">گالری</a></li>
+                        <li><a href="index.html#contact">تماس با ما</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>ساعت کاری</h3>
+                    <p>شنبه تا چهارشنبه: 11:00 - 23:00</p>
+                    <p>پنجشنبه و جمعه: 11:00 - 00:00</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>شبکه‌های اجتماعی</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 تمام حقوق برای رستوران طلایی محفوظ است.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/gallery.js"></script>
+</body>
+</html>

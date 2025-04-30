@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منوی رستوران طلایی</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- هدر سایت -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">رستوران <span>طلایی</span></a>
+            
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">صفحه اصلی</a></li>
+                    <li><a href="menu.html" class="active">منو</a></li>
+                    <li><a href="index.html#about">درباره ما</a></li>
+                    <li><a href="index.html#gallery">گالری</a></li>
+                    <li><a href="index.html#reviews">نظرات</a></li>
+                    <li><a href="index.html#contact">تماس</a></li>
+                </ul>
+            </nav>
+            
+            <div class="icons">
+                <a href="#" class="reserve-btn">رزرو میز</a>
+                <a href="#" class="cart-btn"><i class="fas fa-shopping-cart"></i></a>
+                <div class="menu-btn"><i class="fas fa-bars"></i></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- بخش منوی کامل -->
+    <section class="full-menu">
+        <div class="container">
+            <div class="section-header">
+                <h2>منوی رستوران طلایی</h2>
+                <p>لذت طعم‌های بی‌نظیر را با ما تجربه کنید</p>
+            </div>
+            
+            <div class="menu-tabs">
+                <button class="tab-btn active" data-category="iranian">غذاهای ایرانی</button>
+                <button class="tab-btn" data-category="international">غذاهای بین‌المللی</button>
+                <button class="tab-btn" data-category="appetizers">پیش‌غذاها</button>
+                <button class="tab-btn" data-category="salads">سالادها</button>
+                <button class="tab-btn" data-category="drinks">نوشیدنی‌ها</button>
+                <button class="tab-btn" data-category="desserts">دسرها</button>
+            </div>
+            
+            <!-- غذاهای ایرانی -->
+            <div class="menu-category active" id="iranian">
+                <h3 class="category-title">غذاهای ایرانی</h3>
+                
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>چلوخورش قرمه سبزی</h4>
+                            <p>با گوشت گوسفندی تازه و سبزیجات ارگانیک</p>
+                        </div>
+                        <div class="item-price">120,000 <span>تومان</span></div>
+                        <button class="add-to-cart">+</button>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>چلوخورش قیمه</h4>
+                            <p>با لپه مرغوب و گوشت گوساله ممتاز</p>
+                        </div>
+                        <div class="item-price">110,000 <span>تومان</span></div>
+                        <button class="add-to-cart">+</button>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>چلوكباب برگ</h4>
+                            <p>کباب برگ با گوشت گوساله ممتاز و زعفران اصل</p>
+                        </div>
+                        <div class="item-price">150,000 <span>تومان</span></div>
+                        <button class="add-to-cart">+</button>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>چلوكباب كوبیده</h4>
+                            <p>کباب کوبیده با گوشت گوسفندی و دنبه مخصوص</p>
+                        </div>
+                        <div class="item-price">140,000 <span>تومان</span></div>
+                        <button class="add-to-cart">+</button>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>زرشك پلو با مرغ</h4>
+                            <p>با زرشک تازه و مرغ محلی</p>
+                        </div>
+                        <div class="item-price">130,000 <span>تومان</span></div>
+                        <button class="add-to-cart">+</button>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>سبزی پلو با ماهی</h4>
+                            <p>ماهی قزل‌آلای تازه با سبزی پلو معطر</p>
+                        </div>
+                        <div class="item-price">160,000 <span>تومان</span></div>
+                        <button class="add-to-cart">+</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- غذاهای بین‌المللی -->
+            <div class="menu-category" id="international">
+                <h3 class="category-title">غذاهای بین‌المللی</h3>
+                
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>پیتزا مخصوص</h4>
+                            <p>پیتزا با پپرونی، قارچ، زیتون و پنیر موزارلا</p>
+                        </div>
+                        <div class="item-price">110,000 <span>تومان</span></div>
+                        <button class="add-to-cart">+</button>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>استيك راسته</h4>
+                            <p>استیک راسته گوساله با سس قارچ و سبزیجات کبابی</p>
+                        </div>
+                        <div class="item-price">180,000 <span>تومان</span></div>
+                        <button class="add-to-cart">+</button>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>پاستا آلفردو</h4>
+                            <p>پاستا با سس آلفردو و مرغ گریل شده</p>
+                        </div>
+                        <div class="item-price">95,000 <span>تومان</span></div>
+                        <button class="add-to-cart">+</button>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>برگر مخصوص</h4>
+                            <p>برگر با گوشت 200 گرمی، پنیر چدار و سس مخصوص</p>
+                        </div>
+                        <div class="item-price">85,000 <span>تومان</span></div>
+                        <button class="add-to-cart">+</button>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>سوشی مخلوط</h4>
+                            <p>مجموعه‌ای از سوشی‌های ماهی سالمون و تن</p>
+                        </div>
+                        <div class="item-price">140,000 <span>تومان</span></div>
+                        <button class="add-to-cart">+</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- پیش غذاها -->
+            <div class="menu-category" id="appetizers">
+                <h3 class="category-title">پیش غذاها</h3>
+                
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>میرزا قاسمی</h4>
+                            <p>با بادمجان کبابی، سیر و گوجه فرنگی</p>
+                        </div>
+                        <div class="item-price">45,000 <span>تومان</span></div>
+                        <button class="add-to-cart">+</button>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>کشک بادمجان</h4>
+                            <p>بادمجان کبابی با کشک و نعنا داغ</p>
+                        </div>
+                        <div class="item-price">50,000 <span>تومان</span></div>
+                        <button class="add-to-cart">+</button>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>سالاد الویه</h4>
+                            <p>سالاد الویه با سینه مرغ و سس مخصوص</p>
+                        </div>
+                        <div class="item-price">40,000 <span>تومان</span></div>
+                        <button class="add-to-cart">+</button>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>نان سیر</h4>
+                            <p>نان تست با سس سیر و پنیر موزارلا</p>
+                        </div>
+                        <div class="item-price">35,000 <span>تومان</span></div>
+                        <button class="add-to-cart">+</button>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>پنیر برشته</h4>
+                            <p>پنیر فتا برشته شده با گردو و سبزیجات معطر</p>
+                        </div>
+                        <div class="item-price">55,000 <span>تومان</span></div>
+                        <button class="add-to-cart">+</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- سالادها -->
+            <div class="menu-category" id="salads">
+                <h3 class="category-title">سالادها</h3>
+                
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>سالاد سزار</h4>
+                            <p>کاهو، سس سزار، نان تست و پنیر پارمزان</p>
+                        </div>
+                        <div class="item-price">75,000 <span>تومان</span></div>
+                        <button class="add-to-cart">+</button>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>سالاد یونانی</h4>
+                            <p>خیار، گوجه، فلفل دلمه، زیتون و پنیر فتا</p>
+                        </div>
+                        <div class="item-price">65,000 <span>تومان</span></div>
+                        <button class="add-to-cart">+</button>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>سالاد فصل</h4>
+                            <p>ترکیبی از سبزیجات تازه فصل با سس مخصوص</p>
+                        </div>
+                        <div class="item-price">55,000 <span>تومان</span></div>
+                        <button class="add-to-cart">+</button>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>سالاد ماکارونی</h4>
+                            <p>ماکارونی با سس مایونز و سبزیجات</p>
+                        </div>
+                        <div class="item-price">50,000 <span>تومان</span></div>
+                        <button class="add-to-cart">+</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- نوشیدنی‌ها -->
+            <div class="menu-category" id="drinks">
+                <h3 class="category-title">نوشیدنی‌ها</h3>
+                
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>دوغ محلی</h4>
+                            <p>دوغ گازدار با نعنا و کاکوتی</p>
+                        </div>
+                        <div class="item-price">25,000 <span>تومان</span></div>
+                        <button class="add-to-cart">+</button>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>آب معدنی</h4>
+                            <p>آب معدنی دماوند</p>
+                        </div>
+                        <div class="item-price">15,000 <span>تومان</span></div>
+                        <button class="add-to-cart">+</button>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>نوشابه</h4>
+                            <p>کوکاکولا، فانتا، اسپرایت</p>
+                        </div>
+                        <div class="item-price">20,000 <span>تومان</span></div>
+                        <button class="add-to-cart">+</button>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>آبمیوه طبیعی</h4>
+                            <p>پرتقال، هویج، انار</p>
+                        </div>
+                        <div class="item-price">35,000 <span>تومان</span></div>
+                        <button class="add-to-cart">+</button>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>ماءالشعیر</h4>
+                            <p>ماءالشعیر بدون الکل</p>
+                        </div>
+                        <div class="item-price">25,000 <span>تومان</span></div>
+                        <button class="add-to-cart">+</button>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>چای</h4>
+                            <p>چای ایرانی به همراه نبات</p>
+                        </div>
+                        <div class="item-price">15,000 <span>تومان</span></div>
+                        <button class="add-to-cart">+</button>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>قهوه ترک</h4>
+                            <p>قهوه ترک اصل</p>
+                        </div>
+                        <div class="item-price">30,000 <span>تومان</span></div>
+                        <button class="add-to-cart">+</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- دسرها -->
+            <div class="menu-category" id="desserts">
+                <h3 class="category-title">دسرها</h3>
+                
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>بستنی سنتی</h4>
+                            <p>بستنی زعفرانی با پسته و خلال بادام</p>
+                        </div>
+                        <div class="item-price">45,000 <span>تومان</span></div>
+                        <button class="add-to-cart">+</button>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>فرنی</h4>
+                            <p>فرنی خانگی با گلاب و پودر پسته</p>
+                        </div>
+                        <div class="item-price">35,000 <span>تومان</span></div>
+                        <button class="add-to-cart">+</button>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>شیرینی خانگی</h4>
+                            <p>شیرینی خشک خانگی با چای</p>
+                        </div>
+                        <div class="item-price">30,000 <span>تومان</span></div>
+                        <button class="add-to-cart">+</button>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>چیزکیک</h4>
+                            <p>چیزکیک وانیلی با توت فرنگی</p>
+                        </div>
+                        <div class="item-price">55,000 <span>تومان</span></div>
+                        <button class="add-to-cart">+</button>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="item-info">
+                            <h4>ترافل شکلاتی</h4>
+                            <p>ترافل شکلاتی با مغز گردو</p>
+                        </div>
+                        <div class="item-price">40,000 <span>تومان</span></div>
+                        <button class="add-to-cart">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- سبد خرید -->
+    <div class="cart-sidebar">
+        <div class="cart-header">
+            <h3>سبد خرید شما</h3>
+            <button class="close-cart"><i class="fas fa-times"></i></button>
+        </div>
+        
+        <div class="cart-items">
+            <!-- آیتم‌های سبد خرید اینجا نمایش داده می‌شوند -->
+        </div>
+        
+        <div class="cart-total">
+            <span>مجموع:</span>
+            <span class="total-price">0 <span>تومان</span></span>
+        </div>
+        
+        <button class="checkout-btn">تکمیل سفارش</button>
+    </div>
+    <div class="cart-overlay"></div>
+
+    <script src="js/script.js"></script>
+    <script src="js/menu.js"></script>
+</body>
+</html>

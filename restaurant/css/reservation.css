@@ -1,0 +1,269 @@
+/* استایل‌های اختصاصی برگه رزرو */
+.reservation {
+    padding: 100px 0;
+    background-color: var(--light-gray);
+}
+
+.reservation-container {
+    display: flex;
+    gap: 40px;
+}
+
+.reservation-form {
+    flex: 1;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.reservation-info {
+    width: 350px;
+}
+
+.info-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+}
+
+.info-card h3 {
+    font-size: 1.3rem;
+    color: var(--primary);
+    margin-bottom: 20px;
+    padding-right: 15px;
+    border-right: 3px solid var(--primary);
+}
+
+.working-hours li {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px dashed var(--light-gray);
+}
+
+.working-hours li:last-child {
+    border-bottom: none;
+}
+
+.benefits li {
+    padding: 8px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.benefits i {
+    color: var(--primary);
+}
+
+.contact-info p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 0;
+}
+
+.contact-info i {
+    color: var(--primary);
+    width: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--gray);
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--primary);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(230, 57, 70, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+.form-submit {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.form-submit .btn {
+    padding: 12px 40px;
+    font-size: 1.1rem;
+}
+
+/* بخش نمایش قیمت */
+.price-summary {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+    border: 1px solid #eee;
+}
+
+.price-summary h4 {
+    color: var(--primary);
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.price-details div {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px dashed #ddd;
+}
+
+.price-details div:last-child {
+    border-bottom: none;
+}
+
+.price-details .total {
+    font-weight: bold;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 2px solid var(--primary);
+}
+
+.price-details span:last-child {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.discount-notice {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+.discount-notice .discount-amount {
+    color: #4CAF50;
+}
+
+/* تقویم شمسی */
+.ui-datepicker {
+    font-family: 'Open Sans', 'Noto Nastaliq Urdu', sans-serif;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.ui-datepicker-header {
+    background: var(--primary);
+    color: white;
+    border-radius: 3px;
+    padding: 10px;
+    text-align: center;
+}
+
+.ui-datepicker-title {
+    font-weight: 600;
+}
+
+.ui-datepicker-prev, .ui-datepicker-next {
+    cursor: pointer;
+    color: white;
+}
+
+.ui-datepicker-calendar th {
+    padding: 5px;
+    color: var(--primary);
+}
+
+.ui-datepicker-calendar td {
+    text-align: center;
+    padding: 5px;
+}
+
+.ui-datepicker-calendar a {
+    display: block;
+    padding: 5px;
+    border-radius: 3px;
+    transition: all 0.2s ease;
+}
+
+.ui-datepicker-calendar a:hover {
+    background: var(--accent);
+}
+
+.ui-datepicker-calendar .ui-state-active {
+    background: var(--primary);
+    color: white;
+}
+
+/* رسپانسیو */
+@media (max-width: 992px) {
+    .reservation-container {
+        flex-direction: column;
+    }
+    
+    .reservation-info {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .info-card {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .reservation {
+        padding: 80px 0;
+    }
+    
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .reservation-info {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .reservation-form {
+        padding: 20px;
+    }
+    
+    .section-header h2 {
+        font-size: 2rem;
+    }
+}

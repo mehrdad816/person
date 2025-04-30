@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حساب کاربری - فروشگاه آنلاین</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <style>
+        /* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Account Container */
+.account-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Header Styles */
+.account-header {
+    background: linear-gradient(135deg, #4b6cb7, #182848);
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+.account-header h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.profile-pic {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid white;
+    object-fit: cover;
+}
+
+.username {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.user-email {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* Navigation Styles */
+.account-nav {
+    background: #fff;
+    border-bottom: 1px solid #eee;
+}
+
+.account-nav ul {
+    display: flex;
+    list-style: none;
+    overflow-x: auto;
+    padding: 0 20px;
+}
+
+.account-nav li {
+    flex-shrink: 0;
+}
+
+.account-nav a {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    transition: all 0.3s;
+    border-bottom: 3px solid transparent;
+}
+
+.account-nav a:hover {
+    color: #4b6cb7;
+}
+
+.account-nav li.active a {
+    color: #4b6cb7;
+    border-bottom-color: #4b6cb7;
+}
+
+.account-nav i {
+    margin-left: 8px;
+}
+
+/* Content Styles */
+.account-content {
+    padding: 30px;
+}
+
+.account-section {
+    display: none;
+}
+
+.account-section.active {
+    display: block;
+}
+
+.account-section h2 {
+    margin-bottom: 20px;
+    color: #444;
+    font-size: 22px;
+}
+
+.account-section h2 i {
+    margin-left: 10px;
+    color: #4b6cb7;
+}
+
+/* Form Styles */
+.account-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #555;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border 0.3s;
+}
+
+.form-group input:focus {
+    border-color: #4b6cb7;
+    outline: none;
+}
+
+.save-btn {
+    background: #4b6cb7;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background 0.3s;
+}
+
+.save-btn:hover {
+    background: #3a5a9c;
+}
+
+/* Orders Styles */
+.orders-list {
+    margin-top: 20px;
+}
+
+.order-item {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.order-header {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #ddd;
+}
+
+.order-id, .order-date, .order-total {
+    font-weight: 500;
+}
+
+.order-status {
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.order-status.completed {
+    background: #e1f5e8;
+    color: #2e7d32;
+}
+
+.order-products {
+    margin-bottom: 15px;
+}
+
+.product {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 0;
+}
+
+.product img {
+    border-radius: 5px;
+}
+
+.order-details-btn {
+    background: #f0f0f0;
+    color: #555;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s;
+}
+
+.order-details-btn:hover {
+    background: #e0e0e0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .account-nav ul {
+        flex-direction: column;
+    }
+    
+    .account-nav li {
+        width: 100%;
+    }
+    
+    .account-nav a {
+        border-bottom: 1px solid #eee;
+    }
+    
+    .user-info {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+    </style>
+    <div class="account-container">
+        <header class="account-header">
+            <h1>حساب کاربری</h1>
+            <div class="user-info">
+                <img src="https://via.placeholder.com/80" alt="پروفایل کاربر" class="profile-pic">
+                <div>
+                    <p class="username">محمد رضایی</p>
+                    <p class="user-email">mohammad@example.com</p>
+                </div>
+            </div>
+        </header>
+
+        <nav class="account-nav">
+            <ul>
+                <li class="active"><a href="#"><i class="fas fa-user"></i> اطلاعات حساب</a></li>
+                <li><a href="#"><i class="fas fa-shopping-bag"></i> سفارشات</a></li>
+                <li><a href="#"><i class="fas fa-map-marker-alt"></i> آدرس‌ها</a></li>
+                <li><a href="#"><i class="fas fa-heart"></i> علاقه‌مندی‌ها</a></li>
+                <li><a href="#"><i class="fas fa-lock"></i> تغییر رمز عبور</a></li>
+                <li><a href="#"><i class="fas fa-sign-out-alt"></i> خروج</a></li>
+            </ul>
+        </nav>
+
+        <main class="account-content">
+            <section class="account-section active" id="profile">
+                <h2><i class="fas fa-user"></i> اطلاعات شخصی</h2>
+                <form class="account-form">
+                    <div class="form-group">
+                        <label for="name">نام کامل</label>
+                        <input type="text" id="name" value="محمد رضایی">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">ایمیل</label>
+                        <input type="email" id="email" value="mohammad@example.com" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">تلفن همراه</label>
+                        <input type="tel" id="phone" value="09123456789">
+                    </div>
+                    <button type="submit" class="save-btn">ذخیره تغییرات</button>
+                </form>
+            </section>
+
+            <section class="account-section" id="orders">
+                <h2><i class="fas fa-shopping-bag"></i> سفارشات اخیر</h2>
+                <div class="orders-list">
+                    <div class="order-item">
+                        <div class="order-header">
+                            <span class="order-id">شماره سفارش: #12345</span>
+                            <span class="order-date">تاریخ: 1402/05/15</span>
+                            <span class="order-status completed">تکمیل شده</span>
+                            <span class="order-total">مبلغ: ۲۵۰,۰۰۰ تومان</span>
+                        </div>
+                        <div class="order-products">
+                            <div class="product">
+                                <img src="https://via.placeholder.com/60" alt="محصول">
+                                <span>کفش ورزشی مردانه</span>
+                                <span>۱ عدد</span>
+                            </div>
+                        </div>
+                        <button class="order-details-btn">مشاهده جزئیات</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    // Tab switching functionality
+    const navLinks = document.querySelectorAll('.account-nav a');
+    const sections = document.querySelectorAll('.account-section');
+    
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Remove active class from all links and sections
+            navLinks.forEach(l => l.parentElement.classList.remove('active'));
+            sections.forEach(s => s.classList.remove('active'));
+            
+            // Add active class to clicked link
+            this.parentElement.classList.add('active');
+            
+            // Show corresponding section
+            const target = this.getAttribute('href').substring(1);
+            if (target) {
+                document.getElementById(target).classList.add('active');
+            } else {
+                // Default to profile section if no target
+                document.getElementById('profile').classList.add('active');
+            }
+        });
+    });
+    
+    // Form submission
+    const accountForm = document.querySelector('.account-form');
+    if (accountForm) {
+        accountForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('تغییرات با موفقیت ذخیره شد!');
+            // Here you would typically send the form data to the server
+        });
+    }
+    
+    // Order details button
+    const orderDetailsBtns = document.querySelectorAll('.order-details-btn');
+    orderDetailsBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            alert('جزئیات سفارش نمایش داده می‌شود...');
+            // Here you would typically show order details in a modal or new page
+        });
+    });
+});
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

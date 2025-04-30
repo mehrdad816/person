@@ -1,0 +1,1449 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لپ‌تاپ ایسوس ROG | فروشگاه آنلاین من</title>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <style>
+        @import url('https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/fonts.css');
+        
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary: #f59e0b;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --gray: #94a3b8;
+            --gray-light: #e2e8f0;
+            --success: #10b981;
+            --danger: #ef4444;
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --rounded: 0.5rem;
+            --rounded-lg: 0.75rem;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Vazirmatn, sans-serif;
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .section {
+            padding: 3rem 0;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--rounded);
+            font-weight: 500;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+            outline: none;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            box-shadow: var(--shadow);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--primary);
+            border: 1px solid var(--primary);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.25rem 0.5rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .badge-primary {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .badge-secondary {
+            background-color: var(--secondary);
+            color: var(--dark);
+        }
+
+        /* Header */
+        .header {
+            background-color: white;
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 0;
+            z-index: 50;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -0.5rem;
+            right: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+            left: 0;
+        }
+
+        .nav-icons {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .nav-icons i {
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .nav-icons i:hover {
+            color: var(--primary);
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -0.5rem;
+            right: -0.5rem;
+            background-color: var(--danger);
+            color: white;
+            width: 1.25rem;
+            height: 1.25rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            padding: 1.5rem 0;
+            background-color: var(--gray-light);
+        }
+
+        .breadcrumb-list {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.875rem;
+        }
+
+        .breadcrumb-item:not(:last-child)::after {
+            content: '/';
+            margin-right: 0.5rem;
+            color: var(--gray);
+        }
+
+        .breadcrumb-link {
+            color: var(--gray);
+            transition: var(--transition);
+        }
+
+        .breadcrumb-link:hover {
+            color: var(--primary);
+        }
+
+        .breadcrumb-link.active {
+            color: var(--primary);
+            font-weight: 500;
+        }
+
+        /* Product Single */
+        .product-single {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        /* Product Gallery */
+        .product-gallery {
+            position: relative;
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            z-index: 10;
+        }
+
+        .product-main-image {
+            border-radius: var(--rounded-lg);
+            overflow: hidden;
+            margin-bottom: 1rem;
+            background-color: white;
+            padding: 2rem;
+            box-shadow: var(--shadow);
+        }
+
+        .product-main-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: contain;
+        }
+
+        .product-thumbnails {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+        }
+
+        .product-thumbnail {
+            border-radius: var(--rounded);
+            overflow: hidden;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: var(--transition);
+            background-color: white;
+            padding: 0.5rem;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .product-thumbnail:hover, .product-thumbnail.active {
+            border-color: var(--primary);
+        }
+
+        .product-thumbnail img {
+            width: 100%;
+            height: 80px;
+            object-fit: contain;
+        }
+
+        /* Product Info */
+        .product-info {
+            background-color: white;
+            padding: 2rem;
+            border-radius: var(--rounded-lg);
+            box-shadow: var(--shadow);
+        }
+
+        .product-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .product-meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .product-rating {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        .product-rating i {
+            color: var(--secondary);
+            font-size: 1rem;
+        }
+
+        .product-review-count {
+            font-size: 0.875rem;
+            color: var(--gray);
+        }
+
+        .product-availability {
+            font-size: 0.875rem;
+            color: var(--success);
+            font-weight: 500;
+        }
+
+        .product-price {
+            margin-bottom: 1.5rem;
+        }
+
+        .current-price {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .old-price {
+            text-decoration: line-through;
+            color: var(--gray);
+            font-size: 1.25rem;
+            margin-right: 0.75rem;
+        }
+
+        .discount-percentage {
+            background-color: var(--danger);
+            color: white;
+            padding: 0.25rem 0.5rem;
+            border-radius: var(--rounded);
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        .product-description {
+            margin-bottom: 1.5rem;
+            color: var(--dark);
+            line-height: 1.8;
+        }
+
+        .product-actions {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .quantity-selector {
+            display: flex;
+            align-items: center;
+            border: 1px solid var(--gray-light);
+            border-radius: var(--rounded);
+            overflow: hidden;
+        }
+
+        .quantity-btn {
+            width: 2.5rem;
+            height: 2.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--gray-light);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .quantity-btn:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .quantity-input {
+            width: 3rem;
+            height: 2.5rem;
+            text-align: center;
+            border: none;
+            outline: none;
+            font-weight: 500;
+        }
+
+        .add-to-cart {
+            flex: 1;
+            padding: 0.75rem;
+            background-color: var(--primary);
+            color: white;
+            border-radius: var(--rounded);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            transition: var(--transition);
+        }
+
+        .add-to-cart:hover {
+            background-color: var(--primary-dark);
+        }
+
+        .wishlist-btn {
+            width: 2.5rem;
+            height: 2.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background-color: white;
+            color: var(--dark);
+            border: 1px solid var(--gray);
+            transition: var(--transition);
+        }
+
+        .wishlist-btn:hover {
+            color: var(--danger);
+            border-color: var(--danger);
+        }
+
+        .product-meta-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            margin-bottom: 2rem;
+        }
+
+        .product-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 0.875rem;
+        }
+
+        .product-meta-item i {
+            color: var(--primary);
+            font-size: 1.25rem;
+        }
+
+        .product-share {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .share-btn {
+            width: 2.5rem;
+            height: 2.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background-color: var(--gray-light);
+            transition: var(--transition);
+        }
+
+        .share-btn:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        /* Product Tabs */
+        .product-tabs {
+            margin-top: 3rem;
+        }
+
+        .tabs-header {
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid var(--gray-light);
+            margin-bottom: 2rem;
+        }
+
+        .tab-btn {
+            padding: 1rem 1.5rem;
+            font-weight: 600;
+            cursor: pointer;
+            position: relative;
+            transition: var(--transition);
+        }
+
+        .tab-btn::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            right: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary);
+            transition: var(--transition);
+        }
+
+        .tab-btn:hover, .tab-btn.active {
+            color: var(--primary);
+        }
+
+        .tab-btn.active::after {
+            width: 100%;
+            left: 0;
+        }
+
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .product-specs {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .product-specs tr:nth-child(even) {
+            background-color: var(--gray-light);
+        }
+
+        .product-specs th, .product-specs td {
+            padding: 1rem;
+            text-align: right;
+            border-bottom: 1px solid var(--gray-light);
+        }
+
+        .product-specs th {
+            font-weight: 600;
+            width: 30%;
+        }
+
+        .reviews-list {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .review-item {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: var(--rounded);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .review-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+        }
+
+        .review-author {
+            font-weight: 600;
+        }
+
+        .review-date {
+            font-size: 0.875rem;
+            color: var(--gray);
+        }
+
+        .review-rating {
+            color: var(--secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        .review-text {
+            color: var(--dark);
+            line-height: 1.8;
+        }
+
+        /* Related Products */
+        .related-products {
+            margin-top: 5rem;
+        }
+
+        .section-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -0.75rem;
+            right: 0;
+            width: 5rem;
+            height: 0.25rem;
+            background: var(--primary);
+            border-radius: 0.25rem;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .product-card {
+            background-color: white;
+            border-radius: var(--rounded);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .product-card:hover {
+            transform: translateY(-0.5rem);
+            box-shadow: var(--shadow-md);
+        }
+
+        .product-image {
+            height: 15rem;
+            overflow: hidden;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.05);
+        }
+
+        .product-content {
+            padding: 1.5rem;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 5rem 0 2rem;
+            margin-top: 5rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 1.5rem;
+            display: inline-block;
+        }
+
+        .footer-about {
+            margin-bottom: 1.5rem;
+            opacity: 0.8;
+        }
+
+        .footer-social {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .social-icon {
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .social-icon:hover {
+            background-color: var(--primary);
+            transform: translateY(-0.25rem);
+        }
+
+        .footer-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .footer-title::after {
+            content: '';
+            position: absolute;
+            bottom: -0.5rem;
+            right: 0;
+            width: 2rem;
+            height: 2px;
+            background-color: var(--primary);
+        }
+
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-links a {
+            opacity: 0.8;
+            transition: var(--transition);
+            display: inline-block;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+            color: var(--primary);
+            transform: translateX(-0.5rem);
+        }
+
+        .footer-contact li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+            opacity: 0.8;
+        }
+
+        .footer-contact i {
+            color: var(--primary);
+            font-size: 1.25rem;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+            text-align: center;
+            opacity: 0.7;
+            font-size: 0.875rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .product-single {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .product-main-image img {
+                height: 350px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .section {
+                padding: 2rem 0;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 5rem;
+                right: -100%;
+                width: 80%;
+                height: calc(100vh - 5rem);
+                background-color: white;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 2rem;
+                box-shadow: var(--shadow-md);
+                transition: var(--transition);
+                z-index: 40;
+            }
+            
+            .nav-links.active {
+                right: 0;
+            }
+            
+            .product-actions {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .quantity-selector {
+                width: 100%;
+            }
+            
+            .add-to-cart {
+                width: 100%;
+            }
+            
+            .product-thumbnails {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .product-main-image img {
+                height: 250px;
+            }
+            
+            .product-thumbnails {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .tabs-header {
+                overflow-x: auto;
+                white-space: nowrap;
+                padding-bottom: 0.5rem;
+            }
+            
+            .tab-btn {
+                padding: 0.75rem 1rem;
+                font-size: 0.875rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">فروشگاه من</a>
+                
+                <div class="nav-links">
+                    <a href="#">خانه</a>
+                    <a href="#" class="active">محصولات</a>
+                    <a href="#">دسته‌بندی‌ها</a>
+                    <a href="#">درباره ما</a>
+                    <a href="#">تماس با ما</a>
+                </div>
+                
+                <div class="nav-icons">
+                    <div style="position: relative;">
+                        <i class='bx bx-search'></i>
+                    </div>
+                    <div style="position: relative;">
+                        <i class='bx bx-user'></i>
+                    </div>
+                    <div style="position: relative;">
+                        <i class='bx bx-heart'></i>
+                        <span class="cart-count">3</span>
+                    </div>
+                    <div style="position: relative;">
+                        <i class='bx bx-cart'></i>
+                        <span class="cart-count">5</span>
+                    </div>
+                    <div class="mobile-menu-btn">
+                        <i class='bx bx-menu'></i>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <ul class="breadcrumb-list">
+                <li class="breadcrumb-item">
+                    <a href="#" class="breadcrumb-link">خانه</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a href="#" class="breadcrumb-link">محصولات</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a href="#" class="breadcrumb-link">الکترونیک</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a href="#" class="breadcrumb-link active">لپ‌تاپ ایسوس ROG</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Product Single -->
+    <section class="section">
+        <div class="container">
+            <div class="product-single">
+                <!-- Product Gallery -->
+                <div class="product-gallery">
+                    <span class="product-badge">
+                        <span class="badge badge-primary">جدید</span>
+                    </span>
+                    
+                    <div class="product-main-image">
+                        <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1326&q=80" alt="لپ‌تاپ ایسوس ROG">
+                    </div>
+                    
+                    <div class="product-thumbnails">
+                        <div class="product-thumbnail active">
+                            <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1326&q=80" alt="لپ‌تاپ ایسوس ROG">
+                        </div>
+                        <div class="product-thumbnail">
+                            <img src="https://images.unsplash.com/photo-1541807084-5c52b6b3adef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80" alt="لپ‌تاپ ایسوس ROG - نمای جانبی">
+                        </div>
+                        <div class="product-thumbnail">
+                            <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1332&q=80" alt="لپ‌تاپ ایسوس ROG - صفحه کلید">
+                        </div>
+                        <div class="product-thumbnail">
+                            <img src="https://images.unsplash.com/photo-1587202372775-e229f172b9d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80" alt="لپ‌تاپ ایسوس ROG - پشت دستگاه">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product Info -->
+                <div class="product-info">
+                    <h1 class="product-title">لپ‌تاپ ایسوس ROG Strix G15</h1>
+                    
+                    <div class="product-meta">
+                        <div class="product-rating">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star-half'></i>
+                            <span class="product-review-count">(28 نظر)</span>
+                        </div>
+                        <span class="product-availability">موجود در انبار</span>
+                    </div>
+                    
+                    <div class="product-price">
+                        <span class="old-price">28,500,000 تومان</span>
+                        <span class="current-price">25,000,000 تومان</span>
+                        <span class="discount-percentage">12% تخفیف</span>
+                    </div>
+                    
+                    <p class="product-description">
+                        لپ‌تاپ ایسوس ROG Strix G15 یک دستگاه قدرتمند برای گیمرها و کاربران حرفه‌ای است. با پردازنده Intel Core i7 نسل 12، کارت گرافیک NVIDIA GeForce RTX 3060 و صفحه نمایش 15.6 اینچی با نرخ تازه‌سازی 144Hz، این لپ‌تاپ تجربه‌ای بی‌نظیر را ارائه می‌دهد.
+                    </p>
+                    
+                    <div class="product-actions">
+                        <div class="quantity-selector">
+                            <button class="quantity-btn minus">-</button>
+                            <input type="number" value="1" min="1" class="quantity-input">
+                            <button class="quantity-btn plus">+</button>
+                        </div>
+                        
+                        <button class="add-to-cart">
+                            <i class='bx bx-cart'></i>
+                            افزودن به سبد خرید
+                        </button>
+                        
+                        <button class="wishlist-btn">
+                            <i class='bx bx-heart'></i>
+                        </button>
+                    </div>
+                    
+                    <div class="product-meta-list">
+                        <div class="product-meta-item">
+                            <i class='bx bx-category'></i>
+                            <span>دسته‌بندی: <strong>لپ‌تاپ و کامپیوتر</strong></span>
+                        </div>
+                        <div class="product-meta-item">
+                            <i class='bx bx-barcode'></i>
+                            <span>کد محصول: <strong>ASUS-ROG-G15-001</strong></span>
+                        </div>
+                        <div class="product-meta-item">
+                            <i class='bx bx-package'></i>
+                            <span>وضعیت: <strong>موجود در انبار</strong></span>
+                        </div>
+                        <div class="product-meta-item">
+                            <i class='bx bx-shield'></i>
+                            <span>گارانتی: <strong>24 ماهه شرکتی</strong></span>
+                        </div>
+                    </div>
+                    
+                    <div class="product-share">
+                        <span>اشتراک گذاری:</span>
+                        <a href="#" class="share-btn">
+                            <i class='bx bxl-telegram'></i>
+                        </a>
+                        <a href="#" class="share-btn">
+                            <i class='bx bxl-whatsapp'></i>
+                        </a>
+                        <a href="#" class="share-btn">
+                            <i class='bx bxl-twitter'></i>
+                        </a>
+                        <a href="#" class="share-btn">
+                            <i class='bx bxl-linkedin'></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product Tabs -->
+            <div class="product-tabs">
+                <div class="tabs-header">
+                    <div class="tab-btn active" data-tab="description">توضیحات محصول</div>
+                    <div class="tab-btn" data-tab="specs">مشخصات فنی</div>
+                    <div class="tab-btn" data-tab="reviews">نظرات (28)</div>
+                </div>
+                
+                <div class="tab-content active" id="description">
+                    <h3>توضیحات کامل محصول</h3>
+                    <p>
+                        لپ‌تاپ ایسوس ROG Strix G15 یک دستگاه قدرتمند برای گیمرها و کاربران حرفه‌ای است که به دنبال عملکرد بالا و طراحی جذاب هستند. این مدل با پردازنده Intel Core i7 نسل 12 و کارت گرافیک NVIDIA GeForce RTX 3060، توانایی اجرای بازی‌های سنگین و نرم‌افزارهای حرفه‌ای را دارد.
+                    </p>
+                    <p>
+                        صفحه نمایش 15.6 اینچی Full HD با نرخ تازه‌سازی 144Hz و زمان پاسخگویی 3ms، تجربه‌ای نرم و روان را در بازی‌ها ارائه می‌دهد. سیستم خنک‌کننده پیشرفته با دو فن و چندین لوله حرارتی، دمای دستگاه را در حین کارهای سنگین به خوبی کنترل می‌کند.
+                    </p>
+                    <p>
+                        طراحی زیبا و RGB Keyboard با قابلیت تنظیم نورپردازی، ظاهری جذاب به این لپ‌تاپ بخشیده است. باتری 90Wh با عمر مناسب و پورت‌های متنوع از جمله USB-C, USB 3.2, HDMI 2.0 و خروجی صدا از دیگر ویژگی‌های این مدل هستند.
+                    </p>
+                </div>
+                
+                <div class="tab-content" id="specs">
+                    <h3>مشخصات فنی</h3>
+                    <table class="product-specs">
+                        <tr>
+                            <th>پردازنده</th>
+                            <td>Intel Core i7-12700H (14 هسته‌ای، 20 رشته‌ای، تا 4.7GHz)</td>
+                        </tr>
+                        <tr>
+                            <th>کارت گرافیک</th>
+                            <td>NVIDIA GeForce RTX 3060 با 6GB GDDR6</td>
+                        </tr>
+                        <tr>
+                            <th>حافظه RAM</th>
+                            <td>16GB DDR5 4800MHz (قابل ارتقا تا 32GB)</td>
+                        </tr>
+                        <tr>
+                            <th>ذخیره‌سازی</th>
+                            <td>1TB SSD NVMe M.2</td>
+                        </tr>
+                        <tr>
+                            <th>صفحه نمایش</th>
+                            <td>15.6 اینچ Full HD (1920x1080) IPS, 144Hz, 3ms, 100% sRGB</td>
+                        </tr>
+                        <tr>
+                            <th>سیستم عامل</th>
+                            <td>Windows 11 Home</td>
+                        </tr>
+                        <tr>
+                            <th>باتری</th>
+                            <td>90Wh با شارژ سریع</td>
+                        </tr>
+                        <tr>
+                            <th>وزن</th>
+                            <td>2.3 کیلوگرم</td>
+                        </tr>
+                        <tr>
+                            <th>پورت‌ها</th>
+                            <td>1x USB 3.2 Type-C, 3x USB 3.2 Type-A, 1x HDMI 2.0, 1x RJ45, 1x Audio Jack, 1x Thunderbolt 4</td>
+                        </tr>
+                        <tr>
+                            <th>سایر ویژگی‌ها</th>
+                            <td>RGB Backlit Keyboard, Wi-Fi 6, Bluetooth 5.2, HD Webcam, Stereo Speakers</td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div class="tab-content" id="reviews">
+                    <h3>نظرات مشتریان</h3>
+                    <div class="reviews-list">
+                        <div class="review-item">
+                            <div class="review-header">
+                                <span class="review-author">محمد رضایی</span>
+                                <span class="review-date">1402/05/15</span>
+                            </div>
+                            <div class="review-rating">
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                            </div>
+                            <p class="review-text">
+                                لپ‌تاپ بسیار عالی با عملکرد فوق‌العاده. بازی‌های جدید را با بالاترین تنظیمات به راحتی اجرا می‌کند. سیستم خنک‌کننده واقعاً مؤثر است و حتی پس از چند ساعت بازی، دمای دستگاه معقول است.
+                            </p>
+                        </div>
+                        
+                        <div class="review-item">
+                            <div class="review-header">
+                                <span class="review-author">زهرا محمدی</span>
+                                <span class="review-date">1402/04/28</span>
+                            </div>
+                            <div class="review-rating">
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bx-star'></i>
+                        </div>
+                        <p class="review-text">
+                            طراحی زیبا و کیفیت ساخت عالی دارد. صفحه نمایش واقعاً عالی است و رنگ‌ها را به خوبی نمایش می‌دهد. فقط وزن آن کمی سنگین است که برای حمل و نقل ممکن است مشکل‌ساز باشد.
+                        </p>
+                    </div>
+
+                    <div class="review-item">
+                        <div class="review-header">
+                            <span class="review-author">امیر حسینی</span>
+                            <span class="review-date">1402/03/10</span>
+                        </div>
+                        <div class="review-rating">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star-half'></i>
+                            <i class='bx bx-star'></i>
+                        </div>
+                        <p class="review-text">
+                            عملکرد عالی برای کارهای گرافیکی و رندرینگ. فن‌ها گاهی اوقات صدای زیادی دارند اما در کل برای این سطح از سخت‌افزار قابل قبول است. پیشنهاد می‌کنم برای کسانی که کارهای حرفه‌ای انجام می‌دهند.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Review Form -->
+                <div class="review-form">
+                    <h3>نظر خود را ثبت کنید</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="review-name">نام شما</label>
+                            <input type="text" id="review-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="review-email">ایمیل شما</label>
+                            <input type="email" id="review-email" required>
+                        </div>
+                        <div class="form-group">
+                            <label>امتیاز شما</label>
+                            <div class="rating-selector">
+                                <i class='bx bx-star' data-rating="1"></i>
+                                <i class='bx bx-star' data-rating="2"></i>
+                                <i class='bx bx-star' data-rating="3"></i>
+                                <i class='bx bx-star' data-rating="4"></i>
+                                <i class='bx bx-star' data-rating="5"></i>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="review-text">نظر شما</label>
+                            <textarea id="review-text" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">ثبت نظر</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Related Products -->
+        <div class="related-products">
+            <h2 class="section-title">محصولات مشابه</h2>
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <span class="product-badge">
+                        <span class="badge badge-secondary">پرفروش</span>
+                    </span>
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1332&q=80" alt="لپ‌تاپ دل">
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">لپ‌تاپ دل G15</h3>
+                        <div class="product-price">
+                            <span class="current-price">23,500,000 تومان</span>
+                        </div>
+                        <div class="product-rating">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bx-star'></i>
+                            <span>(15)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="لپ‌تاپ لنوو">
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">لپ‌تاپ لنوو Legion 5</h3>
+                        <div class="product-price">
+                            <span class="current-price">27,800,000 تومان</span>
+                            <span class="old-price">30,000,000 تومان</span>
+                        </div>
+                        <div class="product-rating">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star-half'></i>
+                            <span>(22)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <span class="product-badge">
+                        <span class="badge badge-primary">جدید</span>
+                    </span>
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1618410320928-2523d772e1f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="لپ‌تاپ ام‌اس‌آی">
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">لپ‌تاپ ام‌اس‌آی Katana</h3>
+                        <div class="product-price">
+                            <span class="current-price">26,200,000 تومان</span>
+                        </div>
+                        <div class="product-rating">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bx-star'></i>
+                            <span>(18)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1618410320909-afce43c5a985?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="لپ‌تاپ ایسر">
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">لپ‌تاپ ایسر Nitro 5</h3>
+                        <div class="product-price">
+                            <span class="current-price">24,900,000 تومان</span>
+                            <span class="old-price">27,500,000 تومان</span>
+                        </div>
+                        <div class="product-rating">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bx-star'></i>
+                            <i class='bx bx-star'></i>
+                            <span>(12)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <a href="#" class="footer-logo">فروشگاه من</a>
+                <p class="footer-about">
+                    ما یک فروشگاه آنلاین هستیم که بهترین محصولات را با بهترین قیمت به شما ارائه می‌دهیم. کیفیت و رضایت مشتری اولویت ماست.
+                </p>
+                <div class="footer-social">
+                    <a href="#" class="social-icon"><i class='bx bxl-instagram'></i></a>
+                    <a href="#" class="social-icon"><i class='bx bxl-telegram'></i></a>
+                    <a href="#" class="social-icon"><i class='bx bxl-twitter'></i></a>
+                    <a href="#" class="social-icon"><i class='bx bxl-linkedin'></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-col">
+                <h3 class="footer-title">لینک‌های سریع</h3>
+                <ul class="footer-links">
+                    <li><a href="#">خانه</a></li>
+                    <li><a href="#">محصولات</a></li>
+                    <li><a href="#">درباره ما</a></li>
+                    <li><a href="#">تماس با ما</a></li>
+                    <li><a href="#">وبلاگ</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h3 class="footer-title">خدمات مشتریان</h3>
+                <ul class="footer-links">
+                    <li><a href="#">حساب کاربری</a></li>
+                    <li><a href="#">پیگیری سفارش</a></li>
+                    <li><a href="#">شرایط بازگشت</a></li>
+                    <li><a href="#">حریم خصوصی</a></li>
+                    <li><a href="#">پرسش‌های متداول</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h3 class="footer-title">تماس با ما</h3>
+                <ul class="footer-contact">
+                    <li>
+                        <i class='bx bx-map'></i>
+                        <span>تهران، خیابان آزادی، پلاک 123</span>
+                    </li>
+                    <li>
+                        <i class='bx bx-phone'></i>
+                        <span>021-12345678</span>
+                    </li>
+                    <li>
+                        <i class='bx bx-envelope'></i>
+                        <span>info@example.com</span>
+                    </li>
+                    <li>
+                        <i class='bx bx-time'></i>
+                        <span>شنبه تا پنجشنبه: 9 صبح تا 5 بعدازظهر</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>© 1403 تمام حقوق برای فروشگاه من محفوظ است.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script>
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const navLinks = document.querySelector('.nav-links');
+    
+    mobileMenuBtn.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+
+    // Product Thumbnails Gallery
+    const thumbnails = document.querySelectorAll('.product-thumbnail');
+    const mainImage = document.querySelector('.product-main-image img');
+    
+    thumbnails.forEach(thumb => {
+        thumb.addEventListener('click', () => {
+            // Remove active class from all thumbnails
+            thumbnails.forEach(t => t.classList.remove('active'));
+            // Add active class to clicked thumbnail
+            thumb.classList.add('active');
+            // Change main image
+            mainImage.src = thumb.querySelector('img').src;
+        });
+    });
+
+    // Quantity Selector
+    const minusBtn = document.querySelector('.quantity-btn.minus');
+    const plusBtn = document.querySelector('.quantity-btn.plus');
+    const quantityInput = document.querySelector('.quantity-input');
+    
+    minusBtn.addEventListener('click', () => {
+        let value = parseInt(quantityInput.value);
+        if (value > 1) {
+            quantityInput.value = value - 1;
+        }
+    });
+    
+    plusBtn.addEventListener('click', () => {
+        let value = parseInt(quantityInput.value);
+        quantityInput.value = value + 1;
+    });
+
+    // Tabs Functionality
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const tabContents = document.querySelectorAll('.tab-content');
+    
+    tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const tabId = btn.getAttribute('data-tab');
+            
+            // Remove active class from all buttons and contents
+            tabBtns.forEach(b => b.classList.remove('active'));
+            tabContents.forEach(c => c.classList.remove('active'));
+            
+            // Add active class to clicked button and corresponding content
+            btn.classList.add('active');
+            document.getElementById(tabId).classList.add('active');
+        });
+    });
+
+    // Rating Stars in Review Form
+    const ratingStars = document.querySelectorAll('.rating-selector i');
+    
+    ratingStars.forEach(star => {
+        star.addEventListener('click', () => {
+            const rating = star.getAttribute('data-rating');
+            
+            // Reset all stars
+            ratingStars.forEach(s => {
+                s.classList.remove('bxs-star');
+                s.classList.add('bx-star');
+            });
+            
+            // Fill stars up to the clicked one
+            for (let i = 0; i < rating; i++) {
+                ratingStars[i].classList.remove('bx-star');
+                ratingStars[i].classList.add('bxs-star');
+            }
+        });
+    });
+
+    // Initialize Swiper for Related Products
+    const relatedSwiper = new Swiper('.related-products .swiper', {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            640: {
+                slidesPerView: 2,
+            },
+            768: {
+                slidesPerView: 3,
+            },
+            1024: {
+                slidesPerView: 4,
+            },
+        }
+    });
+        </script>   
+    </body>
+</html>
